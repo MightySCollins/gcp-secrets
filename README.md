@@ -28,26 +28,29 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`gcp-secrets hello`](#gcp-secrets-hello)
+* [`gcp-secrets edit`](#gcp-secrets-edit)
 * [`gcp-secrets help [COMMAND]`](#gcp-secrets-help-command)
+* [`gcp-secrets list`](#gcp-secrets-list)
 
-## `gcp-secrets hello`
+## `gcp-secrets edit`
 
 Describe the command here
 
 ```
 USAGE
-  $ gcp-secrets hello
+  $ gcp-secrets edit
 
 OPTIONS
-  -n, --name=name  name to print
+  -d, --destroy          If the old version of the secret should be destroyed
+  -p, --project=project  Project name
+  -s, --secret=secret    Secret name
 
 DESCRIPTION
   ...
   Extra documentation goes here
 ```
 
-_See code: [src/commands/hello.js](https://github.com/MightySCollins/gcp-secrets/blob/v0.0.0/src/commands/hello.js)_
+_See code: [src/commands/edit.js](https://github.com/MightySCollins/gcp-secrets/blob/v0.0.0/src/commands/edit.js)_
 
 ## `gcp-secrets help [COMMAND]`
 
@@ -65,4 +68,30 @@ OPTIONS
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.2.0/src/commands/help.ts)_
+
+## `gcp-secrets list`
+
+Describe the command here
+
+```
+USAGE
+  $ gcp-secrets list
+
+OPTIONS
+  -p, --project=project   name to print
+  -x, --extended          show extra columns
+  --columns=columns       only show provided columns (comma-separated)
+  --csv                   output is csv format [alias: --output=csv]
+  --filter=filter         filter property by partial string matching, ex: name=foo
+  --no-header             hide table header from output
+  --no-truncate           do not truncate output to fit screen
+  --output=csv|json|yaml  output in a more machine friendly format
+  --sort=sort             property to sort by (prepend '-' for descending)
+
+DESCRIPTION
+  ...
+  Extra documentation goes here
+```
+
+_See code: [src/commands/list.js](https://github.com/MightySCollins/gcp-secrets/blob/v0.0.0/src/commands/list.js)_
 <!-- commandsstop -->
