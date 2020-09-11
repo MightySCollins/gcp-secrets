@@ -1,0 +1,60 @@
+{
+  "name": "gcp-secrets",
+  "version": "0.0.0",
+  "author": "Sam Collins @MightySCollins",
+  "bin": {
+    "gcp-secrets": "./bin/run"
+  },
+  "bugs": "https://github.com/MightySCollins/gcp-secrets/issues",
+  "dependencies": {
+    "@google-cloud/secret-manager": "^3.1.0",
+    "@oclif/command": "^1",
+    "@oclif/config": "^1",
+    "@oclif/plugin-help": "^3",
+    "cli-ux": "^5.5.0",
+    "inquirer": "^7.3.3",
+    "open-editor": "^2.0.1",
+    "tmp": "^0.2.1",
+    "tmp-promise": "^3.0.2"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1",
+    "@oclif/test": "^1",
+    "chai": "^4",
+    "eslint": "^5.13",
+    "eslint-config-oclif": "^3.1",
+    "globby": "^10",
+    "mocha": "^5",
+    "nyc": "^14"
+  },
+  "engines": {
+    "node": ">=11.0.0"
+  },
+  "files": [
+    "/bin",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json",
+    "/src"
+  ],
+  "homepage": "https://github.com/MightySCollins/gcp-secrets",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "src/index.js",
+  "oclif": {
+    "commands": "./src/commands",
+    "bin": "gcp-secrets",
+    "plugins": [
+      "@oclif/plugin-help"
+    ]
+  },
+  "repository": "MightySCollins/gcp-secrets",
+  "scripts": {
+    "postpack": "rm -f oclif.manifest.json",
+    "posttest": "eslint .",
+    "prepack": "oclif-dev manifest && oclif-dev readme",
+    "test": "nyc mocha --forbid-only \"test/**/*.test.js\"",
+    "version": "oclif-dev readme && git add README.md"
+  }
+}
