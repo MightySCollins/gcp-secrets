@@ -19,7 +19,7 @@ $ npm install -g gcp-secrets
 $ gcp-secrets COMMAND
 running command...
 $ gcp-secrets (-v|--version|version)
-gcp-secrets/0.0.0 linux-x64 node-v14.7.0
+gcp-secrets/0.0.1 linux-x64 node-v14.7.0
 $ gcp-secrets --help [COMMAND]
 USAGE
   $ gcp-secrets COMMAND
@@ -50,7 +50,7 @@ DESCRIPTION
   Extra documentation goes here
 ```
 
-_See code: [src/commands/edit.js](https://github.com/MightySCollins/gcp-secrets/blob/v0.0.0/src/commands/edit.js)_
+_See code: [src/commands/edit.js](https://github.com/MightySCollins/gcp-secrets/blob/v0.0.1/src/commands/edit.js)_
 
 ## `gcp-secrets help [COMMAND]`
 
@@ -93,5 +93,5 @@ DESCRIPTION
   Extra documentation goes here
 ```
 
-_See code: [src/commands/list.js](https://github.com/MightySCollins/gcp-secrets/blob/v0.0.0/src/commands/list.js)_
+_See code: [src/commands/list.js](https://github.com/MightySCollins/gcp-secrets/blob/v0.0.1/src/commands/list.js)_
 <!-- commandsstop -->
