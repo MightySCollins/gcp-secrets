@@ -19,7 +19,7 @@ $ npm install -g gcp-secrets
 $ gcp-secrets COMMAND
 running command...
 $ gcp-secrets (-v|--version|version)
-gcp-secrets/0.0.1 linux-x64 node-v14.7.0
+gcp-secrets/0.1.0 linux-x64 node-v14.7.0
 $ gcp-secrets --help [COMMAND]
 USAGE
   $ gcp-secrets COMMAND
@@ -28,9 +28,30 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
+* [`gcp-secrets add`](#gcp-secrets-add)
 * [`gcp-secrets edit`](#gcp-secrets-edit)
 * [`gcp-secrets help [COMMAND]`](#gcp-secrets-help-command)
 * [`gcp-secrets list`](#gcp-secrets-list)
+* [`gcp-secrets view`](#gcp-secrets-view)
+
+## `gcp-secrets add`
+
+Describe the command here
+
+```
+USAGE
+  $ gcp-secrets add
+
+OPTIONS
+  -p, --project=project  Project name
+  -s, --secret=secret    Secret name
+
+DESCRIPTION
+  ...
+  Extra documentation goes here
+```
+
+_See code: [src/commands/add.js](https://github.com/MightySCollins/gcp-secrets/blob/v0.1.0/src/commands/add.js)_
 
 ## `gcp-secrets edit`
 
@@ -50,7 +71,7 @@ DESCRIPTION
   Extra documentation goes here
 ```
 
-_See code: [src/commands/edit.js](https://github.com/MightySCollins/gcp-secrets/blob/v0.0.1/src/commands/edit.js)_
+_See code: [src/commands/edit.js](https://github.com/MightySCollins/gcp-secrets/blob/v0.1.0/src/commands/edit.js)_
 
 ## `gcp-secrets help [COMMAND]`
 
@@ -93,5 +114,24 @@ DESCRIPTION
   Extra documentation goes here
 ```
 
-_See code: [src/commands/list.js](https://github.com/MightySCollins/gcp-secrets/blob/v0.0.1/src/commands/list.js)_
+_See code: [src/commands/list.js](https://github.com/MightySCollins/gcp-secrets/blob/v0.1.0/src/commands/list.js)_
+
+## `gcp-secrets view`
+
+Describe the command here
+
+```
+USAGE
+  $ gcp-secrets view
+
+OPTIONS
+  -p, --project=project  Project name
+  -s, --secret=secret    Secret name
+
+DESCRIPTION
+  ...
+  Extra documentation goes here
+```
+
+_See code: [src/commands/view.js](https://github.com/MightySCollins/gcp-secrets/blob/v0.1.0/src/commands/view.js)_
 <!-- commandsstop -->

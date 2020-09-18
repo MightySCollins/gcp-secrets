@@ -1,6 +1,6 @@
 {
   "name": "gcp-secrets",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "author": "Sam Collins @MightySCollins",
   "bin": {
     "gcp-secrets": "./bin/run"
