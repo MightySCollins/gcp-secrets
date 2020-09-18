@@ -1,26 +1,9 @@
 const {Command, flags} = require('@oclif/command')
 const inquirer = require('inquirer')
-const childProcess = require('child_process')
 const fs = require('fs').promises
 const {file} = require('tmp-promise')
 const {list, getVersion, update, destroy} = require('../manager')
-
-function openEditor(path) {
-  const editor = process.env.EDITOR || 'vi'
-
-  return new Promise(((resolve, reject) => {
-    let child = childProcess.spawn(editor, [path], {
-      stdio: 'inherit',
-    })
-    child.on('exit', code => {
-      if (code === 0) {
-        resolve(path)
-      } else {
-        reject(new Error(`${editor} has non zero exit code: ${code}`))
-      }
-    })
-  }))
-}
+const {openEditor} = require('../files')
 
 class EditCommand extends Command {
   async run() {

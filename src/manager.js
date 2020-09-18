@@ -54,7 +54,21 @@ async function getVersion(projectName, secretName, version = 'latest') {
   }
 }
 
-async function update(projectName, secretName, buffer) {
+async function addSecret(projectName, secretName) {
+  const [secret] = await getClient().createSecret({
+    parent: buildParentName(projectName),
+    secret: {
+      name: secretName,
+      replication: {
+        automatic: {},
+      },
+    },
+    secretName,
+  })
+  return secret
+}
+
+async function addVersion(projectName, secretName, buffer) {
   const [secret] = await getClient().addSecretVersion({
     parent: buildParentName(projectName, secretName),
     payload: {
@@ -71,4 +85,4 @@ async function destroy(projectName, secretName, version) {
   return secret
 }
 
-module.exports = {list, getVersion, update, destroy}
+module.exports = {list, getVersion, update: addVersion, destroy, addSecret}
